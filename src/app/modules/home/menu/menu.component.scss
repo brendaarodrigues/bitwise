@@ -1,0 +1,42 @@
+@import '/src/app/core/themes/variables.scss';
+
+.menu {
+  padding: (16 0 16 0);
+  background: white;
+  // justify-content: space-between;
+
+  &__header {
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      margin-top: 10px;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+
+.navigation-menu {
+  background: white;
+  padding: 15px;
+  height: 100vh;
+}
+
+.mat-expansion-panel:not([class*=mat-elevation-z]) {
+  box-shadow: none;
+}
+
+.mat-expansion-panel-header:not([aria-disabled=true]) {
+  padding: 0;
+  height: 32px
+}
+
+.navigation-menu ul {
+  list-style: none;
+  padding: 0;
+}

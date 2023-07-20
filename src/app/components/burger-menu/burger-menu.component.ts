@@ -1,24 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss']
+  selector: 'app-burger-menu',
+  templateUrl: './burger-menu.component.html',
+  styleUrls: ['./burger-menu.component.scss']
 })
-export class MenuComponent {
-  isNavHidden: boolean = true;
-  showMenu: boolean = false;
-
-  @Input() menuActive!: boolean;
-
-  toggleNav(event: MouseEvent) {
-    console.log(this.isNavHidden);
-    if(this.isNavHidden) {
-      this.isNavHidden = false;
-    } else {
-      this.isNavHidden = true;
-    }
-  }
+export class BurgerMenuComponent {
+  @Input() showMenu = false;
 
   navigationItems = [
     {
@@ -60,12 +48,11 @@ export class MenuComponent {
       showDropdown: false
     }
   ];
+  toggleMenu() {
+    this.showMenu = !this.showMenu;
+  }
 
   toggleDropdown(item: any) {
     item.showDropdown = !item.showDropdown;
-  }
-
-  toggleMenu() {
-    this.showMenu = !this.showMenu;
   }
 }
