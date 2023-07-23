@@ -1,63 +1,60 @@
 import { Component, Input } from '@angular/core';
+import { DropDownAnimation } from 'src/app/core/animations/animations';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss']
+  styleUrls: ['./menu.component.scss'],
+  animations: [DropDownAnimation]
 })
 export class MenuComponent {
-  isNavHidden: boolean = true;
   showMenu: boolean = false;
 
   @Input() menuActive!: boolean;
 
-  toggleNav(event: MouseEvent) {
-    console.log(this.isNavHidden);
-    if(this.isNavHidden) {
-      this.isNavHidden = false;
-    } else {
-      this.isNavHidden = true;
-    }
-  }
-
   navigationItems = [
     {
-      label: 'Para você',
-      link: '#',
+      label: 'Página inicial',
+      link: 'home',
       options: [],
       showDropdown: false,
     },
     {
-      label: 'Para o seu negócio',
-      link: '#',
+      label: 'Para você',
       options: [
-        { label: 'Overview', link: '#overview' },
-        { label: 'Mission', link: '#mission' },
-        { label: 'Team', link: '#team' }
+        { label: 'Conta do Bitwise', link: 'conta' },
+        { label: 'Cartão de crédito', link: 'cartao' },
+        { label: 'Investimentos', link: 'investimentos' }
       ],
-      showDropdown: false
+      showDropdown: true,
+    },
+    {
+      label: 'Para o seu negócio',
+      options: [
+        { label: 'Conta PJ', link: 'conta-pj' },
+        { label: 'Cartão de crédito PJ', link: 'cartao-pj' },
+      ],
+      showDropdown: false,
     },
     {
       label: 'Bitwise Bank',
-      // link: '#',
       options: [
-        { label: 'Service 1', link: '#service1' },
-        { label: 'Service 2', link: '#service2' },
-        { label: 'Service 3', link: '#service3' }
+        { label: 'Sobre nós', link: 'sobre-nos' },
+        { label: 'Newsletter', link: 'newsletter' },
+        { label: 'Carreiras', link: 'carreiras' }
       ],
-      showDropdown: false
+      showDropdown: false,
     },
     {
       label: 'Ajuda',
-      link: '#',
       options: [],
       showDropdown: false
     },
     {
       label: 'Login',
-      link: '#',
       options: [],
-      showDropdown: false
+      showDropdown: false,
+      icon: 'save_alt'
     }
   ];
 

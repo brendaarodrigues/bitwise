@@ -2,23 +2,22 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center; /* Add this to center the items horizontally */
-  width: 25px;
-  height: 17px;
+  align-items: center;
+  width: 20px;
+  height: 15px;
   cursor: pointer;
   float: right;
 }
 
 .bar {
   width: 100%;
-  height: 3px;
+  height: 2px;
   background-color: #333;
   transition: transform 0.3s;
 }
 
-/* "x" shape when the menu is open */
 .open .bar:nth-child(1) {
-  transform: translateY(6px) rotate(45deg);
+  transform: translateY(5px) rotate(45deg);
 }
 
 .open .bar:nth-child(2) {
@@ -29,39 +28,3 @@
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Navigation Menu Styles */
-.navigation-menu {
-  display: none;
-  background: white;
-  padding: 15px;
-  margin-top: 25px;
-}
-
-.navigation-menu.show-menu {
-  display: block;
-}
-
-.navigation-menu ul {
-  list-style: none;
-  padding: 0;
-}
-
-.navigation-menu li {
-  margin-bottom: 10px;
-}
-
-.navigation-menu a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
-
-.mat-expansion-panel:not([class*=mat-elevation-z]) {
-  box-shadow: none;
-}
-
-.mat-expansion-panel-header:not([aria-disabled=true]) {
-  padding: 0;
-  height: 32px
-}

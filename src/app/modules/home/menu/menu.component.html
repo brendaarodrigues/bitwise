@@ -1,51 +1,40 @@
 <div class="menu">
-  <div class="menu__header flex">
-      <h2>Bitwise</h2>
-      <app-burger-menu (click)="toggleMenu()"></app-burger-menu>
+  <div class="header flex">
+    <h1><strong>bitwise</strong></h1>
+    <app-burger-menu (click)="toggleMenu()"></app-burger-menu>
   </div>
 
-  <nav class="navigation-menu" *ngIf="showMenu">
+  <nav class="navigation-menu" *ngIf="showMenu" [@dropDownMenu]>
     <ul>
-      <!-- Loop through the navigation items -->
-      <li *ngFor="let item of navigationItems">
-        <div class="menu-item">
-          <!-- Check if the item has options -->
-          <ng-container *ngIf="item.options && item.options.length > 0; else regularItem">
-            <!-- Use MatExpansionPanel for items with options -->
-            <mat-expansion-panel [expanded]="item.showDropdown">
+      <li class="list-items" *ngFor="let item of navigationItems">
+        <div
+          class="menu-item"
+          [ngClass]="{
+            'regular-item': !item.options || item.options.length === 0
+          }"
+        >
+          <ng-container
+            *ngIf="item.options && item.options.length > 0; else regularItem"
+          >
+            <mat-expansion-panel [expanded]="false" [@.disabled]="true" id="expansion-panel">
               <mat-expansion-panel-header (click)="toggleDropdown(item)">
-                {{ item.label }}
+                <h2>{{ item.label }}</h2>
               </mat-expansion-panel-header>
-              <!-- Show submenu options if the item's dropdown is open -->
-              <ul>
+              <ul class="option-link">
                 <li *ngFor="let option of item.options">
                   <a [href]="option.link">{{ option.label }}</a>
                 </li>
               </ul>
             </mat-expansion-panel>
           </ng-container>
-          <!-- Regular item without options -->
-          <ng-template #regularItem>
-            <a [href]="item.link">{{ item.label }}</a>
-          </ng-template>
+          <div class="regular-item">
+            <ng-template #regularItem>
+              <a [href]="item.link">{{ item.label }}</a>
+              <mat-icon>{{ item.icon }}</mat-icon>
+            </ng-template>
+          </div>
         </div>
       </li>
     </ul>
   </nav>
-
-    <!-- <div class="menu__options flex">
-      <nav [class.hidden]="isNavHidden">
-        <ul>
-          <li>Para você</li>
-          <li>Para o seu negócio</li>
-          <li>Bitwise Bank</li>
-          <li>Ajuda</li>
-        </ul>
-      </nav>
-    </div> -->
-  <!-- <div class="menu__login">
-    <button mat-flat-button>
-      Login
-    </button>
-  </div> -->
 </div>

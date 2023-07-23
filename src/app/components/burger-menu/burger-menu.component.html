@@ -3,27 +3,3 @@
   <div class="bar"></div>
   <div class="bar"></div>
 </div>
-
-<!-- <nav class="navigation-menu" [ngClass]="{ 'show-menu': showMenu }">
-  <ul>
-    <li *ngFor="let item of navigationItems">
-      <div class="menu-item">
-        <ng-container *ngIf="item.options && item.options.length > 0; else regularItem">
-          <mat-expansion-panel [expanded]="item.showDropdown">
-            <mat-expansion-panel-header (click)="toggleDropdown(item)">
-              {{ item.label }}
-            </mat-expansion-panel-header>
-            <ul>
-              <li *ngFor="let option of item.options">
-                <a [href]="option.link">{{ option.label }}</a>
-              </li>
-            </ul>
-          </mat-expansion-panel>
-        </ng-container>
-        <ng-template #regularItem>
-          <a [href]="item.link">{{ item.label }}</a>
-        </ng-template>
-      </div>
-    </li>
-  </ul>
-</nav> -->
