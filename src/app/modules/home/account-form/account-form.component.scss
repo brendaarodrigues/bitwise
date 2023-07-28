@@ -1,0 +1,16 @@
+@import "/src/app/core/themes/variables.scss";
+
+
+.container {
+  > .header {
+    color: $text-color-contrast;
+  }
+}
+
+.account-form {
+  color: $text-color;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 20px;
+  gap: 16px;
+}

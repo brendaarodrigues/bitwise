@@ -1,6 +1,14 @@
 .home {
-  background-image: url('../../../assets/img/13.jpg');
+  background-image: url("../../../assets/img/13.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
+
+  > .content {
+    padding: 20px;
+  }
 }
+
+// height: 86vh;
+// display: flex;
+// align-items: center;
