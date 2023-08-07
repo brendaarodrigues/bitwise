@@ -1,15 +1,19 @@
 <div class="container">
-  <h1 class="header">Em poucos cliques, abra sua conta 100% online.</h1>
+  <h1 class="header">Em poucos cliques, abra sua conta 100% online. </h1>
     <mat-card>
-      <div class="account-form">
-        <form [formGroup]="accountForm">
+      <div>
+        <form [formGroup]="accountForm" class="account-form">
         <h1>Peça sua conta e cartão de crédito do Bitwise</h1>
-          <mat-form-field appearance="outline">
+          <mat-form-field>
             <mat-label>Digite seu CPF</mat-label>
             <input matInput type="text" formControlName="cpf" mask="000.000.000-00"/>
             <mat-error *ngIf="cpf?.errors?.['required']">Digite um CPF válido.</mat-error>
           </mat-form-field>
-          <button mat-flat-button>Abra já a sua conta</button>
+          <div class="action">
+            <button mat-flat-button class="login-button">
+                Abra já a sua conta<mat-icon>arrow_forward</mat-icon>
+            </button>
+          </div>
         </form>
       </div>
     </mat-card>
