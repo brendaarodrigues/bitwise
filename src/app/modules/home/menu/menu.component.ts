@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { DropDownAnimation } from 'src/app/core/animations/animations';
 
 @Component({
@@ -8,9 +8,9 @@ import { DropDownAnimation } from 'src/app/core/animations/animations';
   animations: [DropDownAnimation]
 })
 export class MenuComponent {
-  showMenu: boolean = false;
 
-  @Input() menuActive!: boolean;
+  showMenu: boolean = false;
+  @Output() showMenuChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   navigationItems = [
     {
@@ -64,5 +64,6 @@ export class MenuComponent {
 
   toggleMenu() {
     this.showMenu = !this.showMenu;
+    this.showMenuChange.emit(this.showMenu);
   }
 }
