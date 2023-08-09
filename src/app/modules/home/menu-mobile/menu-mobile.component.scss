@@ -1,0 +1,91 @@
+@import "/src/app/core/themes/variables.scss";
+
+::ng-deep {
+  mat-expansion-panel {
+    .mat-expansion-panel-body {
+      padding: 0;
+    }
+  }
+}
+
+.menu {
+  padding: (16 0 16 0);
+  background: $background-color;
+
+  @include respond-to('desktop') {
+    display: none;
+  }
+
+  > .header {
+    padding: 10px 22px 10px 22px;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      margin-top: 10px;
+      font-size: 28px;
+      color: $primary-color;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+  a,
+  h2 {
+    font-size: 32px;
+    color: $text-color;
+    font-weight: 500;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.navigation-menu {
+  background: $background-color;
+  padding: 0px 24px 0px 24px;
+  height: 100vh;
+
+  ul {
+    list-style: none;
+    display: grid;
+    gap: 36px;
+    padding: 0;
+  }
+}
+
+.mat-expansion-panel:not([class*="mat-elevation-z"]) {
+  box-shadow: none;
+  width: 100%;
+}
+
+.mat-expansion-panel-header:not([aria-disabled="true"]) {
+  padding: 0;
+}
+
+.list-items {
+  > .menu-item {
+    margin: 10px 0px 10px 0px;
+    display: flex;
+    align-items: center;
+  }
+
+  > .regular-item {
+    mat-icon {
+      rotate: -90deg;
+      margin-left: 10px;
+      font-size: 26px;
+    }
+  }
+
+  .option-link {
+    a {
+      font-size: 20px !important;
+      font-weight: 400;
+    }
+  }
+}
+
+

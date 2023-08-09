@@ -5,11 +5,19 @@
   display: grid;
   gap: 126px;
   margin-bottom: 67px;
+
+  @include respond-to('desktop') {
+    gap: 68px;
+  }
   > .header {
     color: $text-color-contrast;
     font-size: 36px;
     letter-spacing: 1px;
     line-height: 1.1;
+    
+    @include respond-to('desktop') {
+      max-width: 56vh;
+    }
   }
 }
 
@@ -41,6 +49,10 @@
 .mat-mdc-card {
   background: rgb(255 255 255 / 90%);
   border-radius: 16px;
+
+  @include respond-to('desktop') {
+    max-width: 38vh;
+  }
 }
 
 ::ng-deep {

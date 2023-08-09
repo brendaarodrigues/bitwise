@@ -1,14 +1,24 @@
+@import '/src/app/core/themes/variables.scss';
+
 .home {
   background-image: url("../../../assets/img/13.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
 
+  @include respond-to('desktop') {
+    background-image: url("../../../assets/img/1.jpg");
+  }
+
   > .content {
     padding: 20px;
     display: flex;
     height: 86vh;
     align-items: center;
+
+    @include respond-to('desktop') {
+      margin-left: 68px;
+    }
   }
 }
 

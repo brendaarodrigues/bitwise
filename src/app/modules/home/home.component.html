@@ -1,7 +1,8 @@
 <div class="home">
   <div>
     <header>
-      <app-menu (showMenuChange)="onShowMenuChange($event)"></app-menu>
+      <app-menu-mobile (showMenuChange)="onShowMenuChange($event)"></app-menu-mobile>
+      <app-menu></app-menu>
     </header>
   </div>
   <main class="content" *ngIf="!showMenu">
