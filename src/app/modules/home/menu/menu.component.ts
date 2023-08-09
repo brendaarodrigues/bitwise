@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { DropDownAnimation } from 'src/app/core/animations/animations';
 
 @Component({
@@ -22,26 +22,26 @@ export class MenuComponent {
     {
       label: 'Para você',
       options: [
-        { label: 'Conta do Bitwise', link: 'conta' },
-        { label: 'Cartão de crédito', link: 'cartao' },
-        { label: 'Investimentos', link: 'investimentos' }
+        { label: 'Conta do Bitwise', link: 'home' },
+        { label: 'Cartão de crédito', link: 'home' },
+        { label: 'Investimentos', link: 'home' }
       ],
       showDropdown: true,
     },
     {
       label: 'Para o seu negócio',
       options: [
-        { label: 'Conta PJ', link: 'conta-pj' },
-        { label: 'Cartão de crédito PJ', link: 'cartao-pj' },
+        { label: 'Conta PJ', link: 'home' },
+        { label: 'Cartão de crédito PJ', link: 'home' },
       ],
       showDropdown: false,
     },
     {
       label: 'Bitwise Bank',
       options: [
-        { label: 'Sobre nós', link: 'sobre-nos' },
-        { label: 'Newsletter', link: 'newsletter' },
-        { label: 'Carreiras', link: 'carreiras' }
+        { label: 'Sobre nós', link: 'home' },
+        { label: 'Newsletter', link: 'home' },
+        { label: 'Carreiras', link: 'home' }
       ],
       showDropdown: false,
     },
