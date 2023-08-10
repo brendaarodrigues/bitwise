@@ -4,16 +4,18 @@
     <nav class="navigation-menu" [@dropDownMenu]>
       <ul>
         <li class="list-items" *ngFor="let item of items">
-          <div class="menu-item">
-            <ng-container>
-              <mat-expansion-panel
-                [expanded]="false"
-                [@.disabled]="true"
-                id="expansion-panel"
-                [ngClass]="{'hoverable': item.showDropdown}"
-              >
-                <mat-expansion-panel-header>
-                  <h5>{{ item.label }}</h5>
+          <div
+            class="menu-item"
+            [ngClass]="{
+              'regular-item': !item.options || item.options.length === 0
+            }"
+          >
+            <ng-container
+              *ngIf="item.options && item.options.length > 0; else regularItem"
+            >
+              <mat-expansion-panel [expanded]="false" [@.disabled]="true" id="expansion-panel">
+                <mat-expansion-panel-header (click)="toggleDropdown(item)">
+                  <p>{{ item.label }}</p>
                 </mat-expansion-panel-header>
                 <ul class="option-link">
                   <li *ngFor="let option of item.options">
@@ -22,6 +24,11 @@
                 </ul>
               </mat-expansion-panel>
             </ng-container>
+            <div class="regular-item">
+              <ng-template #regularItem>
+                <a [href]="item.link">{{ item.label }}</a>
+              </ng-template>
+            </div>
           </div>
         </li>
       </ul>
