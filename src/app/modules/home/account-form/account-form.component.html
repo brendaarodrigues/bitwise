@@ -7,7 +7,7 @@
           <mat-form-field>
             <mat-label>Digite seu CPF</mat-label>
             <input matInput type="text" formControlName="cpf" mask="000.000.000-00"/>
-            <mat-error *ngIf="cpf?.errors?.['required']">Digite um CPF válido.</mat-error>
+            <mat-error *ngIf="cpf?.errors?.['required'] || cpf?.errors?.['cpfInvalid']">Digite um CPF válido.</mat-error>
           </mat-form-field>
           <div class="action">
             <button mat-flat-button class="login-button">
