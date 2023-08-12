@@ -5,6 +5,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { CustomValidators } from 'src/app/core/utils/custom-validators';
 
 @Component({
   selector: 'app-account-form',
@@ -19,7 +20,7 @@ export class AccountFormComponent implements OnInit {
 
   ngOnInit() {
     this.accountForm = this.fb.group({
-      cpf: ['', [Validators.required, Validators.maxLength(11)]],
+      cpf: ['', [Validators.required, Validators.maxLength(11), CustomValidators.cpfValidator]],
     });
   }
 
