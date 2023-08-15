@@ -1,8 +1,8 @@
 <div class="menu">
   <div class="header flex">
     <h1><strong>bitwise</strong></h1>
-    <nav class="navigation-menu" [@dropDownMenu]>
-      <ul>
+    <nav class="navigation-menu">
+      <ul class="flex">
         <li class="list-items" *ngFor="let item of items">
           <div
             class="menu-item"
@@ -13,25 +13,28 @@
             <ng-container
               *ngIf="item.options && item.options.length > 0; else regularItem"
             >
-              <mat-expansion-panel [expanded]="false" [@.disabled]="true" id="expansion-panel">
-                <mat-expansion-panel-header (click)="toggleDropdown(item)">
-                  <p>{{ item.label }}</p>
-                </mat-expansion-panel-header>
-                <ul class="option-link">
-                  <li *ngFor="let option of item.options">
+              <p [matMenuTriggerFor]="menu" class="item-label">
+                {{ item.label }} <mat-icon>keyboard_arrow_down</mat-icon>
+              </p>
+              <mat-menu #menu="matMenu">
+                <ul class="option-link flex">
+                  <li mat-menu-item *ngFor="let option of item.options">
                     <a [href]="option.link">{{ option.label }}</a>
                   </li>
                 </ul>
-              </mat-expansion-panel>
+              </mat-menu>
             </ng-container>
             <div class="regular-item">
               <ng-template #regularItem>
-                <a [href]="item.link">{{ item.label }}</a>
+                <a *ngIf="item.display" [href]="item.link">{{ item.label }}</a>
               </ng-template>
             </div>
           </div>
         </li>
       </ul>
     </nav>
+    <button mat-flat-button class="login-button">
+      Login <mat-icon iconPositionEnd>save_alt</mat-icon>
+    </button>
   </div>
 </div>

@@ -14,10 +14,21 @@
     justify-content: space-between;
     align-items: center;
 
+    a, p, button {
+      font-size: 16px;
+    }
+
     h1 {
       margin-top: 10px;
-    //   font-size: 28px;
       color: $primary-color;
+    }
+  }
+
+  .login-button {
+    color: $primary-color;
+    font-weight: 700;
+    mat-icon {
+      rotate: -90deg;
     }
   }
 }
@@ -25,11 +36,29 @@
 .navigation-menu {
     background: $background-color;
     padding: 0px 24px 0px 24px;
-  
+    margin-bottom: 0;
+
     ul {
       list-style: none;
-      display: flex;
       gap: 36px;
       padding: 0;
+      align-items: center;
     }
+
+    p {
+      margin-bottom: 0;
+      align-items: center;
+    }
+  }
+
+  .regular-item {
+    a {
+      text-decoration: none;
+      color: $text-color;
+    }
+  }
+
+  .item-label {
+    display: flex;
+    gap: 8px;
   }
