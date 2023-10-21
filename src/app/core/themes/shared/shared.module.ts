@@ -15,7 +15,7 @@ import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from "ngx-mask";
 @NgModule({
   imports: [CommonModule,
     NgxMaskDirective,
-    NgxMaskPipe,],
+    NgxMaskPipe],
   exports: [
     CommonModule,
     MatButtonModule,

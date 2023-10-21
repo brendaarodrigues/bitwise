@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { RouterModule, Routes } from '@angular/router';
-import { MenuMobileComponent } from './menu-mobile/menu-mobile.component';
+import { MenuMobileComponent } from './components/menu-mobile/menu-mobile.component';
 import { BurgerMenuModule } from 'src/app/components/burger-menu/burger-menu.module';
 import { SharedModule } from 'src/app/core/themes/shared/shared.module';
-import { AccountFormComponent } from './account-form/account-form.component';
-import { MenuComponent } from './menu/menu.component';
+import { AccountFormComponent } from './components/account-form/account-form.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const routes: Routes = [{ path: '', component: HomeComponent }];
 
@@ -22,6 +23,7 @@ const routes: Routes = [{ path: '', component: HomeComponent }];
     MenuComponent,
     MenuMobileComponent,
     AccountFormComponent,
+    FooterComponent
   ],
 })
 export class HomeModule {}
