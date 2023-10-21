@@ -51,14 +51,36 @@
     }
   }
 
-  .regular-item {
-    a {
-      text-decoration: none;
-      color: $text-color;
-    }
+  .option-link {
+    padding: 0;
   }
 
   .item-label {
     display: flex;
     gap: 8px;
   }
+
+
+  .menu-item .item-label {
+    cursor: pointer;
+  }
+
+  .menu-item .mat-menu-panel {
+    display: none;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .list-items:hover .mat-menu-panel {
+    display: block;
+  }
+
+
+  ::ng-deep {
+    .mat-mdc-menu-panel {
+      margin-top: 27px !important;
+      min-width: 200px !important;
+      min-height: 100px !important;
+    }
+  }
+

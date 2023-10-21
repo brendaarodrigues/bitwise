@@ -2,7 +2,7 @@
   <div class="header flex">
     <h1><strong>bitwise</strong></h1>
     <nav class="navigation-menu">
-      <ul class="flex">
+      <ul class="option-link flex">
         <li class="list-items" *ngFor="let item of items">
           <div
             class="menu-item"
@@ -13,20 +13,20 @@
             <ng-container
               *ngIf="item.options && item.options.length > 0; else regularItem"
             >
-              <p [matMenuTriggerFor]="menu" class="item-label">
+              <p class="item-label" [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger" (mouseenter)="triggerMenuIfNotActive(item, menuTrigger)">
                 {{ item.label }} <mat-icon>keyboard_arrow_down</mat-icon>
               </p>
-              <mat-menu #menu="matMenu">
-                <ul class="option-link flex">
+              <mat-menu #menu="matMenu" [hasBackdrop]="false">
+                <ul class="option-link" (mouseleave)="closeMenu(item, menuTrigger)">
                   <li mat-menu-item *ngFor="let option of item.options">
-                    <a [href]="option.link">{{ option.label }}</a>
+                    <a class="text-decoration-none" [href]="option.link">{{ option.label }}</a>
                   </li>
                 </ul>
               </mat-menu>
             </ng-container>
             <div class="regular-item">
               <ng-template #regularItem>
-                <a *ngIf="item.display" [href]="item.link">{{ item.label }}</a>
+                <a class="text-decoration-none" *ngIf="item.display" [href]="item.link">{{ item.label }}</a>
               </ng-template>
             </div>
           </div>

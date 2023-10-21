@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-@import './app/core/themes/fonts.scss';
+@import "./app/core/themes/fonts.scss";
+@import "/src/app/core/themes/variables.scss";
+
 html {
   scroll-behavior: smooth;
 }
@@ -8,7 +10,8 @@ body {
   line-height: inherit;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
@@ -17,7 +20,22 @@ html, body {
   display: flex;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, span, mat-label, mat-form-field {
-  font-family: 'Inter', sans-serif !important;
+.text-decoration-none {
+  text-decoration: none;
+  color: $text-color;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+mat-label,
+mat-form-field {
+  font-family: "Inter", sans-serif !important;
 }
 
