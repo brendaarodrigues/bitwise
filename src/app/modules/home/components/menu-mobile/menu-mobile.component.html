@@ -7,31 +7,9 @@
   <nav class="navigation-menu" *ngIf="showMenu" [@dropDownMenu]>
     <ul>
       <li class="list-items" *ngFor="let item of items">
-        <div
-          class="menu-item"
-          [ngClass]="{
-            'regular-item': !item.options || item.options.length === 0
-          }"
-        >
-          <ng-container
-            *ngIf="item.options && item.options.length > 0; else regularItem"
-          >
-            <mat-expansion-panel [expanded]="false" [@.disabled]="true" id="expansion-panel">
-              <mat-expansion-panel-header (click)="toggleDropdown(item)">
-                <h2>{{ item.label }}</h2>
-              </mat-expansion-panel-header>
-              <ul class="option-link">
-                <li *ngFor="let option of item.options">
-                  <a [href]="option.link">{{ option.label }}</a>
-                </li>
-              </ul>
-            </mat-expansion-panel>
-          </ng-container>
+        <div class="menu-item">
           <div class="regular-item">
-            <ng-template #regularItem>
-              <a [href]="item.link">{{ item.label }}</a>
-              <mat-icon>{{ item.icon }}</mat-icon>
-            </ng-template>
+            <a>{{ item }}</a>
           </div>
         </div>
       </li>

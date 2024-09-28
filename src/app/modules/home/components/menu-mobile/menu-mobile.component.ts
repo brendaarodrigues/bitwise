@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { DropDownAnimation } from 'src/app/core/animations/animations';
-import { navigationItems } from 'src/app/core/utils/navigation-items';
 
 @Component({
   selector: 'app-menu-mobile',
@@ -11,8 +10,7 @@ import { navigationItems } from 'src/app/core/utils/navigation-items';
 export class MenuMobileComponent {
 
   showMenu: boolean = false;
-  items = navigationItems;
-  
+  items = ['Página inicial', 'Para você', 'Para o seu negócio', 'O Bitwise', 'Ajuda', 'Login'];
   @Output() showMenuChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   toggleDropdown(item: any) {

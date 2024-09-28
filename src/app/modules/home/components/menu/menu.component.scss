@@ -2,7 +2,7 @@
 
 .menu {
   padding: (16 0 16 0);
-  background: $background-color;
+  background: #ffffff4f;
   display: none;
 
   @include respond-to('desktop') {
@@ -10,12 +10,12 @@
   }
 
   > .header {
-    padding: 10px 22px 10px 22px;
+    padding: 0px 22px;
     justify-content: space-between;
     align-items: center;
 
     a, p, button {
-      font-size: 16px;
+      font-size: 18px;
     }
 
     h1 {
@@ -30,11 +30,10 @@
     mat-icon {
       rotate: -90deg;
     }
-  }
+}
 }
 
 .navigation-menu {
-    background: $background-color;
     padding: 0px 24px 0px 24px;
     margin-bottom: 0;
 
@@ -45,9 +44,14 @@
       align-items: center;
     }
 
-    p {
+    .item-label {
       margin-bottom: 0;
       align-items: center;
+      color: $text-color-contrast;
+    }
+
+    .item-label:hover {
+      color: $primary-color;
     }
   }
 
@@ -65,22 +69,15 @@
     cursor: pointer;
   }
 
-  .menu-item .mat-menu-panel {
-    display: none;
-    position: absolute;
-    z-index: 1;
-  }
-
-  .list-items:hover .mat-menu-panel {
-    display: block;
-  }
-
-
   ::ng-deep {
     .mat-mdc-menu-panel {
-      margin-top: 27px !important;
+      margin-top: 16px !important;
       min-width: 200px !important;
       min-height: 100px !important;
     }
-  }
+
+    .mat-mdc-card {
+      border-radius: 0 !important;
+    }
+}
 

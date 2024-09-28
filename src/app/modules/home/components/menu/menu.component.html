@@ -1,40 +1,19 @@
-<div class="menu">
+<mat-card class="menu">
   <div class="header flex">
-    <h1><strong>bitwise</strong></h1>
+    <h1 style="cursor: pointer"><strong>bitwise</strong></h1>
     <nav class="navigation-menu">
       <ul class="option-link flex">
-        <li class="list-items" *ngFor="let item of items">
-          <div
-            class="menu-item"
-            [ngClass]="{
-              'regular-item': !item.options || item.options.length === 0
-            }"
-          >
-            <ng-container
-              *ngIf="item.options && item.options.length > 0; else regularItem"
-            >
-              <p class="item-label" [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger" (mouseenter)="triggerMenuIfNotActive(item, menuTrigger)">
-                {{ item.label }} <mat-icon>keyboard_arrow_down</mat-icon>
-              </p>
-              <mat-menu #menu="matMenu" [hasBackdrop]="false">
-                <ul class="option-link" (mouseleave)="closeMenu(item, menuTrigger)">
-                  <li mat-menu-item *ngFor="let option of item.options">
-                    <a class="text-decoration-none" [href]="option.link">{{ option.label }}</a>
-                  </li>
-                </ul>
-              </mat-menu>
-            </ng-container>
-            <div class="regular-item">
-              <ng-template #regularItem>
-                <a class="text-decoration-none" *ngIf="item.display" [href]="item.link">{{ item.label }}</a>
-              </ng-template>
-            </div>
+        <li class="list-items" *ngFor="let item of navigationItems">
+          <div class="menu-item">
+            <p class="item-label">
+              {{ item }}
+            </p>
           </div>
         </li>
       </ul>
     </nav>
-    <button mat-flat-button class="login-button">
+    <button mat-flat-button class="login-button" style="background: none;">
       Login <mat-icon iconPositionEnd>save_alt</mat-icon>
     </button>
   </div>
-</div>
+</mat-card>

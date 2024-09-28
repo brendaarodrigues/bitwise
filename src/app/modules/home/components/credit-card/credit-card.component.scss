@@ -1,0 +1,40 @@
+@import "/src/app/core/themes/variables.scss";
+
+.credit-card {
+  background: $background-color;
+  align-content: center;
+  display: grid;
+
+  .card-benefits {
+    ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      gap: 10px;
+
+      li {
+        display: flex;
+        gap: 8px;
+
+        mat-icon {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  .action-button {
+    display: flex;
+    justify-content: center;
+
+    button {
+      width: 100%;
+    }
+
+      ::ng-deep {
+        .mdc-button__label {
+          color: $text-color-contrast;
+        }
+      }
+  }
+}

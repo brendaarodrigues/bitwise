@@ -1,23 +1,29 @@
 @import '/src/app/core/themes/variables.scss';
 
 .home {
-  background-image: url("../../../assets/img/13.jpg");
+  background-image: url("../../../assets/img/bitwise-home.png");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  background-position: 31%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  height: 114vh;
 
   @include respond-to('desktop') {
-    background-image: url("../../../assets/img/1.jpg");
+    background-image: url("../../../assets/img/bitwise-home.png");
+    background-position: center;
   }
 
   > .content {
     padding: 20px;
     display: flex;
-    height: 86vh;
+    height: 100vh;
     align-items: center;
+    background-color: #3f3f3f4f;
 
     @include respond-to('desktop') {
       margin-left: 68px;
+      background-color: transparent;
     }
   }
 }

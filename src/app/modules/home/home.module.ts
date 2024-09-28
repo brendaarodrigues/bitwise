@@ -8,6 +8,7 @@ import { SharedModule } from 'src/app/core/themes/shared/shared.module';
 import { AccountFormComponent } from './components/account-form/account-form.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CreditCardComponent } from './components/credit-card/credit-card.component';
 
 const routes: Routes = [{ path: '', component: HomeComponent }];
 
@@ -23,7 +24,8 @@ const routes: Routes = [{ path: '', component: HomeComponent }];
     MenuComponent,
     MenuMobileComponent,
     AccountFormComponent,
-    FooterComponent
+    CreditCardComponent,
+    FooterComponent,
   ],
 })
 export class HomeModule {}

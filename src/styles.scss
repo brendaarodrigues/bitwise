@@ -1,6 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
-@import "./app/core/themes/fonts.scss";
+@use '@angular/material' as mat;
 @import "/src/app/core/themes/variables.scss";
+@import "/src/app/core/themes/palettes.scss";
+
+@include mat.core();
+
+$bitwise-primary: mat.define-palette($md-primary);
+$bitwise-accent: mat.define-palette($md-accent);
+
+$bitwise-theme: mat.define-light-theme((
+  color: (
+    primary: $bitwise-primary,
+    accent: $bitwise-accent
+  )
+));
+
+@include mat.all-component-themes($bitwise-theme);
+
+
+@import "./app/core/themes/fonts.scss";
 
 html {
   scroll-behavior: smooth;
@@ -20,6 +38,11 @@ body {
   display: flex;
 }
 
+.ct {
+  height: 100vh;
+  padding: 20px;
+}
+
 .text-decoration-none {
   text-decoration: none;
   color: $text-color;
@@ -36,6 +59,22 @@ p,
 span,
 mat-label,
 mat-form-field {
-  font-family: "Inter", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 16px;
 }
 

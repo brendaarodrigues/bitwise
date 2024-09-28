@@ -1,16 +1,23 @@
 <div class="home">
+  <div id="#"></div>
   <div>
     <header>
       <app-menu-mobile (showMenuChange)="onShowMenuChange($event)"></app-menu-mobile>
       <app-menu></app-menu>
     </header>
   </div>
-  <main class="content" *ngIf="!showMenu">
+  <main class="content">
     <section id="account-form">
       <app-account-form></app-account-form>
     </section>
   </main>
+  <section id="credit-card">
+    <app-credit-card></app-credit-card>
+  </section>
   <section id="footer">
     <app-footer></app-footer>
   </section>
 </div>
+
+
+<!-- ngIf=!showMenu -->

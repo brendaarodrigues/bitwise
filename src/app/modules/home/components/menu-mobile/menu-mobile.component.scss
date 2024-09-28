@@ -10,7 +10,7 @@
 
 .menu {
   padding: (16 0 16 0);
-  background: $background-color;
+  background: #ffffff4f;
 
   @include respond-to('desktop') {
     display: none;
@@ -20,6 +20,8 @@
     padding: 10px 22px 10px 22px;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    backdrop-filter: blur(15px);
 
     h1 {
       margin-top: 10px;
@@ -44,9 +46,12 @@
 }
 
 .navigation-menu {
-  background: $background-color;
+  background: #ffffff47;
   padding: 0px 24px 0px 24px;
-  height: 100vh;
+  height: 104vh;
+  width: 100%;
+  position: absolute;
+  backdrop-filter: blur(15px);
 
   ul {
     list-style: none;
