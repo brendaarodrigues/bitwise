@@ -4,6 +4,16 @@
   background: $background-color;
   align-content: center;
   display: grid;
+  gap: 10px;
+
+  header {
+    display: grid;
+    gap: 10px;
+
+    h1 {
+      font-size: 31px;
+    }
+  }
 
   .card-benefits {
     ul {
@@ -26,6 +36,7 @@
   .action-button {
     display: flex;
     justify-content: center;
+    margin-top: 10px;
 
     button {
       width: 100%;

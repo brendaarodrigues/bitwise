@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { DropDownAnimation } from 'src/app/core/animations/animations';
 
 @Component({
@@ -9,7 +9,7 @@ import { DropDownAnimation } from 'src/app/core/animations/animations';
 })
 export class MenuMobileComponent {
 
-  showMenu: boolean = false;
+  @Input() showMenu: boolean = false;
   items = ['Página inicial', 'Para você', 'Para o seu negócio', 'O Bitwise', 'Ajuda', 'Login'];
   @Output() showMenuChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 

@@ -9,6 +9,7 @@
     display: flex;
     justify-content: space-evenly;
     padding: 40px;
+    height: 50vh;
   }
 
   p:hover {
@@ -30,6 +31,11 @@
 
     img:hover {
       cursor: pointer;
+    }
+
+    @include respond-to("desktop") {
+      height: fit-content;
+      gap: 10px;
     }
   }
 }

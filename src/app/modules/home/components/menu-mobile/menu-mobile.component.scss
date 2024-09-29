@@ -48,9 +48,9 @@
 .navigation-menu {
   background: #ffffff47;
   padding: 0px 24px 0px 24px;
-  height: 104vh;
+  height: 100vh;
   width: 100%;
-  position: absolute;
+  position: fixed;
   backdrop-filter: blur(15px);
 
   ul {
@@ -75,13 +75,9 @@
     margin: 10px 0px 10px 0px;
     display: flex;
     align-items: center;
-  }
 
-  > .regular-item {
-    mat-icon {
-      rotate: -90deg;
-      margin-left: 10px;
-      font-size: 26px;
+    > :hover {
+      color: $primary-color;
     }
   }
 
