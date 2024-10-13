@@ -21,60 +21,32 @@
   }
 }
 
-.account-form {
-  color: $text-color;
+.account {
+  // color: $text-color;
   display: grid;
   grid-template-columns: 1fr;
-  padding: 32px 22px 32px 22px;
-  gap: 16px;
-  min-height: 242px;
+  // padding: 32px 22px 32px 22px;
+  gap: 26px;
+  margin-top: 32vh;
   h1 {
     margin: 0;
   }
 }
 
 .account-button {
-  display: flex;
-  gap: 5px;
-  align-items: center;
-
   > :hover {
     cursor: pointer;
-    color: $primary-color;
+    color: $text-color;
+
+    @include respond-to("desktop") {
+     color: $primary-color;
+    }
   }
 
   > .button-text {
     margin: 0;
-  }
-}
-
-.action {
-  display: flex;
-  justify-content: center;
-  > .login-button {
-    background: linear-gradient(#7d45ff, #540096);
-    color: $text-color-contrast;
-    width: 100%;
-    height: 47px;
-    border-radius: 10px;
-  }
-}
-
-.mat-mdc-card {
-  background: rgb(255 255 255 / 90%);
-  border-radius: 16px;
-
-  @include respond-to("desktop") {
-    max-width: 38vh;
-  }
-}
-
-::ng-deep {
-  .mdc-text-field--filled:not(.mdc-text-field--disabled) {
-    background-color: transparent;
-  }
-
-  .mat-mdc-form-field {
-    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 }

@@ -1,3 +1,5 @@
+@import "/src/app/core/themes/variables.scss";
+
 .burger-menu {
   display: flex;
   flex-direction: column;
@@ -12,7 +14,7 @@
 .bar {
   width: 100%;
   height: 2px;
-  background-color: #333;
+  background-color: $text-color-contrast;
   transition: transform 0.3s;
 }
 

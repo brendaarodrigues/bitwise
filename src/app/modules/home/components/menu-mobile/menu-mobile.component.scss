@@ -6,11 +6,15 @@
       padding: 0;
     }
   }
+
+  .mat-mdc-card {
+    box-shadow: none !important;
+  }
 }
 
 .menu {
   padding: (16 0 16 0);
-  background: #ffffff4f;
+  background: rgb(0 0 0 / 60%);
 
   @include respond-to('desktop') {
     display: none;
@@ -20,7 +24,6 @@
     padding: 10px 22px 10px 22px;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
     backdrop-filter: blur(15px);
 
     h1 {
@@ -46,9 +49,9 @@
 }
 
 .navigation-menu {
-  background: #ffffff47;
+  background: rgb(0 0 0 / 50%);
   padding: 0px 24px 0px 24px;
-  height: 100vh;
+  height: -webkit-fill-available;
   width: 100%;
   position: fixed;
   backdrop-filter: blur(15px);
@@ -79,12 +82,9 @@
     > :hover {
       color: $primary-color;
     }
-  }
 
-  .option-link {
     a {
-      font-size: 20px !important;
-      font-weight: 400;
+      color: $text-color-contrast;
     }
   }
 }

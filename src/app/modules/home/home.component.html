@@ -1,18 +1,16 @@
 <body [ngClass]="showMenu ? 'overflow-body' : ''">
   <div class="home" >
     <div id="#"></div>
-    <div>
-      <header>
+    <div class="menu">
         <app-menu-mobile (showMenuChange)="onShowMenuChange($event)"></app-menu-mobile>
         <app-menu></app-menu>
-      </header>
     </div>
     <main class="content">
-      <section id="account-form">
+      <section class="p-lg" id="account-form">
         <app-account-form></app-account-form>
       </section>
     </main>
-    <section id="credit-card">
+    <section class="credit-card" id="credit-card">
       <app-credit-card></app-credit-card>
     </section>
     <section id="footer">
@@ -20,6 +18,3 @@
     </section>
   </div>
 </body>
-
-
-<!-- ngIf=!showMenu -->
