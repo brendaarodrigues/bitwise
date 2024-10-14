@@ -9,6 +9,8 @@ import { AccountFormComponent } from './components/account-form/account-form.com
 import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CreditCardComponent } from './components/credit-card/credit-card.component';
+import { AccountBenefitsComponent } from './components/account-benefits/account-benefits.component';
+import { CarouselModule } from 'src/app/carousel/carousel.module';
 
 const routes: Routes = [{ path: '', component: HomeComponent }];
 
@@ -17,6 +19,7 @@ const routes: Routes = [{ path: '', component: HomeComponent }];
     CommonModule,
     RouterModule.forChild(routes),
     BurgerMenuModule,
+    CarouselModule,
     SharedModule,
   ],
   declarations: [
@@ -24,6 +27,7 @@ const routes: Routes = [{ path: '', component: HomeComponent }];
     MenuComponent,
     MenuMobileComponent,
     AccountFormComponent,
+    AccountBenefitsComponent,
     CreditCardComponent,
     FooterComponent,
   ],

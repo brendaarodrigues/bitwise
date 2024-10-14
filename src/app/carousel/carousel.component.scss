@@ -1,0 +1,63 @@
+@import "/src/app/core/themes/variables.scss";
+@import "/src/app/core/themes/sizes.scss";
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+  // gap: 2px;
+  // justify-content: center;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+
+}
+
+.carousel-content {
+  background-color: white;
+  border: 0.13rem solid black;
+  padding: 1.5rem;
+  border-radius: 0.25rem;
+  align-items: center;
+  width: 70%;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+}
+
+// .carousel-control-prev, .carousel-control-next {
+//   position: absolute;
+//   top: 50%;
+//   transform: translateY(-50%);
+//   background: rgba(255, 255, 255, 0.5);
+//   border: none;
+//   cursor: pointer;
+// }
+
+.carousel-controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.carousel-control-next {
+  right: 10px;
+}
+
+
+::ng-deep {
+  .mat-card {
+    background-color: black;
+  }
+}

@@ -1,0 +1,28 @@
+<div class="carousel"  (touchstart)="onTouchStart($event)" (touchend)="onTouchEnd($event)">
+  <div
+    class="mb-sm  carousel-inner"
+    [style.transform]="'translateX(-' + currentIndex * 100 + '%)'"
+  >
+    <div
+      *ngFor="let item of items; let i = index"
+      class="carousel-item"
+      [class.active]="i === currentIndex"
+    >
+    <div class="carousel-content">
+      <mat-icon>{{ item.icon }}</mat-icon>
+      <div class="carousel-caption">
+        <h1>{{ item.title }}</h1>
+        <h3>{{ item.description }}</h3>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="carousel-controls">
+    <button mat-flat-button (click)="prev()" class="carousel-control-prev">
+      <mat-icon iconPositionEnd>arrow_backward</mat-icon>
+    </button>
+    <button mat-flat-button (click)="next()" class="carousel-control-next">
+      <mat-icon iconPositionEnd>arrow_forward</mat-icon>
+    </button>
+  </div>
+</div>

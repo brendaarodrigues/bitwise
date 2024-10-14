@@ -1,0 +1,7 @@
+@import "/src/app/core/themes/variables.scss";
+
+.account-benefits {
+  @include respond-to('desktop') {
+    height: 70vh;
+  }
+}
