@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 interface CarouselItem {
   icon: string;
@@ -12,14 +12,9 @@ interface CarouselItem {
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent {
+  @Input() items: CarouselItem[] = [];
   currentIndex = 0;
   startX: number = 0;
-
-  items: CarouselItem[] = [
-    { icon: 'attach_money', title: 'First Slide', description: 'Description for first slide'},
-    { icon: ' bar_char', title: 'Second Slide', description: 'Description for second slide'},
-    { icon: 'border_all', title: 'Third Slide', description: 'Description for third slide'},
-  ];
 
   next() {
     this.currentIndex = (this.currentIndex + 1) % this.items.length;
@@ -37,11 +32,10 @@ export class CarouselComponent {
     const endX = event.changedTouches[0].clientX;
     const diffX = this.startX - endX;
 
-    // Check the swipe direction
     if (diffX > 50) {
-      this.next(); // Swipe left
+      this.next();
     } else if (diffX < -50) {
-      this.prev(); // Swipe right
+      this.prev();
     }
   }
 }

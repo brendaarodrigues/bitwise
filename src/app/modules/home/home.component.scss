@@ -31,7 +31,7 @@
     background-position-x: 31%;
     display: flex;
     height: 100vh;
-    align-items: center;
+    align-items: end;
     background-color: #3f3f3f4f;
 
     @include respond-to('desktop') {
@@ -43,7 +43,7 @@
   }
 
   > .credit-card {
-
+    background: $contrast-color;
     @include respond-to('desktop') {
      padding: $md-base;
     }

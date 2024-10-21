@@ -1,7 +1,21 @@
 @import "/src/app/core/themes/variables.scss";
 
 .account-benefits {
-  @include respond-to('desktop') {
-    height: 70vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  height: 65vh;
+  // background-color: $contrast-color;
+
+  header {
+    text-align: center;
+    display: grid;
+    gap: 10px;
+
+    h4 {
+      color: #808080;
+    }
+  }
+
+  @include respond-to("desktop") {
   }
 }

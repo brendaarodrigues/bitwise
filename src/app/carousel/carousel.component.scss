@@ -10,8 +10,6 @@
 .carousel-inner {
   display: flex;
   transition: transform 0.5s ease;
-  // gap: 2px;
-  // justify-content: center;
 }
 
 .carousel-item {
@@ -20,15 +18,22 @@
   display: flex;
   justify-content: center;
 
+
+  mat-icon {
+    color: $primary-color;
+  }
 }
 
 .carousel-content {
-  background-color: white;
-  border: 0.13rem solid black;
-  padding: 1.5rem;
-  border-radius: 0.25rem;
-  align-items: center;
+  border: 2px solid rgba(17, 17, 17, 0.1);
+  border-radius: 12px;
+  padding: 24px;
   width: 70%;
+  height: 243px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  // background-color: $background-color;
 }
 
 .carousel img {
@@ -36,28 +41,12 @@
   height: auto;
 }
 
-// .carousel-control-prev, .carousel-control-next {
-//   position: absolute;
-//   top: 50%;
-//   transform: translateY(-50%);
-//   background: rgba(255, 255, 255, 0.5);
-//   border: none;
-//   cursor: pointer;
-// }
-
 .carousel-controls {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   justify-content: center;
 }
 
 .carousel-control-next {
   right: 10px;
-}
-
-
-::ng-deep {
-  .mat-card {
-    background-color: black;
-  }
 }

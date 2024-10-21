@@ -21,11 +21,11 @@ $bitwise-theme: mat.define-light-theme((
 @import "./app/core/themes/fonts.scss";
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 body {
-  line-height: inherit;
+  line-height: normal !important;
 }
 
 html,
@@ -60,21 +60,22 @@ span,
 mat-label,
 mat-form-field {
   font-family: "DM Sans", sans-serif !important;
+  line-height: normal !important;
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 32px !important;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 24px !important;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 20px !important;
 }
 
 h4 {
-  font-size: 16px;
+  font-size: 18px !important;
 }
 
