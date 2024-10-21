@@ -33,10 +33,10 @@
     height: 100vh;
     align-items: end;
     background-color: #3f3f3f4f;
+    background-size: cover;
 
     @include respond-to('desktop') {
       // margin-left: 68px;
-      background-image: url("../../../assets/img/bitwise-home.png");
       background-color: transparent;
       padding: 20px;
     }

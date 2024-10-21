@@ -17,5 +17,16 @@
   }
 
   @include respond-to("desktop") {
+    height: 100vh;
+    align-content: center;
+  }
+
+  &__carousel {
+    app-carousel {
+      @include respond-to("desktop") {
+      display: flex;
+      justify-content: center;
+      }
+    }
   }
 }

@@ -5,11 +5,21 @@
   position: relative;
   width: 100%;
   overflow: hidden;
+
+  @include respond-to('desktop') {
+    width: 70%;
+  }
 }
 
 .carousel-inner {
   display: flex;
   transition: transform 0.5s ease;
+
+  @include respond-to('desktop') {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 26px;
+  }
 }
 
 .carousel-item {
@@ -34,6 +44,10 @@
   flex-direction: column;
   justify-content: space-around;
   // background-color: $background-color;
+
+  @include respond-to('desktop') {
+    width: 80%;
+  }
 }
 
 .carousel img {
@@ -45,6 +59,10 @@
   display: flex;
   gap: 12px;
   justify-content: center;
+
+  @include respond-to('desktop') {
+    display: none;
+  }
 }
 
 .carousel-control-next {
