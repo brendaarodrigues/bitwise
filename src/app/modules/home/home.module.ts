@@ -10,7 +10,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CreditCardComponent } from './components/credit-card/credit-card.component';
 import { AccountBenefitsComponent } from './components/account-benefits/account-benefits.component';
-import { CarouselModule } from 'src/app/carousel/carousel.module';
+import { CarouselModule } from 'src/app/components/carousel/carousel.module';
 
 const routes: Routes = [{ path: '', component: HomeComponent }];
 
